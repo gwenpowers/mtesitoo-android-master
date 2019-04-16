@@ -137,12 +137,12 @@ public class AddProductActivity extends AppCompatActivity {
     public void onBackPressed() {
 
         if (loading) return;
+        //*******@Gwen added 4/14/2019
+        // needed to take out super call to onBackPressed in order to use Dialog Builder
+
      //   super.onBackPressed();
 
-        //Removed clear line as Per Ebrima.  Does not want this functionality.
-        //
 
-        /////////////////CODE FOR POSSIBLE DIALOG BOX//////////////////////////////////
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("Are you sure you want to exit?")
                 .setCancelable(false)
